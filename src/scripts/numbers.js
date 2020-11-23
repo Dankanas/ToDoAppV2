@@ -10,9 +10,15 @@ function addNum(x) {
       document.getElementById('output').innerHTML = '';
       outputClear = false;
     }
+    if (arrayOne.length > 22)
+    {
+        document.getElementById('output').innerHTML = 'Error';
+        arrayOne.splice(0, arrayOne.length)
+    }
+    else {
     document.getElementById('output').innerHTML += x.toString();
     arrayOne.push(x);
-    console.log(arrayOne);
+    console.log(arrayOne); }
   }
 }
 
