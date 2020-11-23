@@ -1,0 +1,15 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 70px;
+  height: 70px;
+  border-radius: 5%;
+  outline: 0;
+}
+
+#buttonEqual {
+  width: 100%;
+}
