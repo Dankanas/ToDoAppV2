@@ -12,12 +12,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/i,
-        use: [{loader: MiniCssExtractPlugin.loader, options: {publicPath: ''}}, 'css-loader', 'sass-loader'],
-      },
-      {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', ],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './',
+            },
+          },
+          'css-loader',
+        ],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -25,10 +29,11 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }]}
+              limit: 128,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

@@ -6,8 +6,13 @@
   font-size: 28px;
 }
 
+@font-face {
+  font-family: 'digitalFont';
+  src: url('../assets/alarm.ttf');
+}
+
 body {
-  background-color: blanchedalmond;
+  background-color: rgb(34, 41, 148);
   display: flex;
   justify-content: center;
   align-items: center;
